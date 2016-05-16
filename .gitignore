@@ -1,0 +1,4 @@
+.vagrant/
+resources/hadoop-2.6.0.tar.gz
+resources/jdk-8u77-linux-i586.tar.gz
+resources/spark-1.1.1-bin-hadoop2.4.tgz
