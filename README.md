@@ -24,14 +24,20 @@ Para continuar con la instalación de este entorno es necesario seguir los sigui
 * Creamos el directorio “vm-spark”.
 `mkdir mv-spark`
 * Descargamos el box del SO con el siguiente comando:
-`vagrant box add centos65 http://files.brianbirkinbine.com/vagrant-centos-65-i386-minimal.box`
+```
+vagrant box add centos65 http://files.brianbirkinbine.com/vagrant-centos-65-i386-minimal.box
+```
 * Descargamos el proyecto “vagrant-spark-cluster” con el siguiente comando:
 `https://github.com/ceal1818/vagrant-spark-cluster.git`
 * Nos ubicamos en el directorio “resources” del directorio “vm-spark”.
 * Descargamos Hadoop 2.6.0
-`curl -O https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz`
+```
+curl -O https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+```
 * Descargamos Spark 1.1.1 integrado con Hadoop 2.4
-`curl -O http://d3kbcqa49mib13.cloudfront.net/spark-1.1.1-bin-hadoop2.4.tgz`
+```
+curl -O http://d3kbcqa49mib13.cloudfront.net/spark-1.1.1-bin-hadoop2.4.tgz
+```
 
 ### Desde el Navegador ###
 
