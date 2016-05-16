@@ -22,13 +22,17 @@ Es necesario instalar las siguientes aplicaciones en el ordenador huésped:
 Para continuar con la instalación de este entorno es necesario seguir los siguientes pasos desde la consola "Git Bash":
 
 * Creamos el directorio “vm-spark”.
-`mkdir mv-spark`
+```
+mkdir mv-spark
+```
 * Descargamos el box del SO con el siguiente comando:
 ```
 vagrant box add centos65 http://files.brianbirkinbine.com/vagrant-centos-65-i386-minimal.box
 ```
 * Descargamos el proyecto “vagrant-spark-cluster” con el siguiente comando:
-`https://github.com/ceal1818/vagrant-spark-cluster.git`
+```
+git clone https://github.com/ceal1818/vagrant-spark-cluster.git vm-spark
+```
 * Nos ubicamos en el directorio “resources” del directorio “vm-spark”.
 * Descargamos Hadoop 2.6.0
 ```
