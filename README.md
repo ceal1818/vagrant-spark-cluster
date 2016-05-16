@@ -56,24 +56,30 @@ Para empezar a trabajar con Spark (si el clúster estaba apagado), es necesario 
 * Entramos en el nodo 1, con el siguiente comando: `vagrant ssh node-1`.
 * Para iniciar todos los servicios y trabajar en cualquiera de los nodos debemos estar logados como root, para ello ejecutamos el comando `sudo su` en cuanto estemos dentro de cualquiera de los nodos del clúster.
 * Desde el nodo 1, iniciamos los nodos HDFS con los siguientes comandos:
-`$HADOOP_PREFIX/sbin/hadoop-daemon.sh --config $HADOOP_CONF_DIR --script hdfs start namenode
-$HADOOP_PREFIX/sbin/hadoop-daemons.sh --config $HADOOP_CONF_DIR --script hdfs start datanode`
+```
+$HADOOP_PREFIX/sbin/hadoop-daemon.sh --config $HADOOP_CONF_DIR --script hdfs start namenode
+$HADOOP_PREFIX/sbin/hadoop-daemons.sh --config $HADOOP_CONF_DIR --script hdfs start datanode
+```
 * Desde el nodo 2, iniciamos los servicios YARN con los siguientes comandos:
-`$HADOOP_YARN_HOME/sbin/yarn-daemon.sh --config $HADOOP_CONF_DIR start resourcemanager
+```
+$HADOOP_YARN_HOME/sbin/yarn-daemon.sh --config $HADOOP_CONF_DIR start resourcemanager
 $HADOOP_YARN_HOME/sbin/yarn-daemons.sh --config $HADOOP_CONF_DIR start nodemanager
 $HADOOP_YARN_HOME/sbin/yarn-daemon.sh start proxyserver --config $HADOOP_CONF_DIR
-$HADOOP_PREFIX/sbin/mr-jobhistory-daemon.sh start historyserver --config $HADOOP_CONF_DIR`
+$HADOOP_PREFIX/sbin/mr-jobhistory-daemon.sh start historyserver --config $HADOOP_CONF_DIR
+```
 * Desde el nodo 1, arrancamos los servicios Spark con el siguiente comando: `$SPARK_HOME/sbin/start-all.sh`
 
 ## Probamos Instalación ##
 Para probar que todo se ha instalado correctamente podemos hacer la siguiente prueba de Spark integrado con YARN:
 
-`$SPARK_HOME/bin/spark-submit --class org.apache.spark.examples.SparkPi \
+```
+$SPARK_HOME/bin/spark-submit --class org.apache.spark.examples.SparkPi \
     --master yarn-cluster \
     --num-executors 10 \
     --executor-cores 2 \
     lib/spark-examples*.jar \
-    100`
+    100
+```
 
 También podamos comprobar el estado de la instalación accediendo al spark-shell a través del siguiente comando:
 
