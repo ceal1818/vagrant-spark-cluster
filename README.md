@@ -64,6 +64,10 @@ Es importante en este punto conocer los siguientes comandos vagrant:
 
 Para empezar a trabajar con Spark (si el clúster estaba apagado), es necesario que arranquemos los servicios YARN y Spark. Para ello es necesario seguir los siguientes pasos:
 * Entramos en el nodo 1, con el siguiente comando: `vagrant ssh node-1`.
+* Formateamos el sistema de ficheros HDFS con el siguiente comando:
+```
+$HADOOP_PREFIX/bin/hdfs namenode -format myhadoop
+```
 * Para iniciar todos los servicios y trabajar en cualquiera de los nodos debemos estar logados como root, para ello ejecutamos el comando `sudo su` en cuanto estemos dentro de cualquiera de los nodos del clúster.
 * Desde el nodo 1, iniciamos los nodos HDFS con los siguientes comandos:
 ```
@@ -87,7 +91,7 @@ $SPARK_HOME/bin/spark-submit --class org.apache.spark.examples.SparkPi \
     --master yarn-cluster \
     --num-executors 10 \
     --executor-cores 2 \
-    lib/spark-examples*.jar \
+    /usr/local/spark/lib/spark-examples*.jar \
     100
 ```
 
