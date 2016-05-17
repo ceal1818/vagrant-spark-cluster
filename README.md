@@ -23,7 +23,7 @@ Para continuar con la instalación de este entorno es necesario seguir los sigui
 
 * Creamos el directorio “vm-spark”.
 ```
-mkdir mv-spark
+mkdir vm-spark
 ```
 * Descargamos el box del SO con el siguiente comando:
 ```
