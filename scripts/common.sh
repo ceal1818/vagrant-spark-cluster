@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #java
-JAVA_ARCHIVE=jdk-8u77-linux-i586.tar.gz
+JAVA_ARCHIVE=jdk-8u91-linux-i586.tar.gz
 #hadoop
 HADOOP_PREFIX=/usr/local/hadoop
 HADOOP_CONF=$HADOOP_PREFIX/etc/hadoop
